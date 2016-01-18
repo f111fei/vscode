@@ -99,6 +99,7 @@ export class Model extends EditableTextModel implements EditorCommon.IModel {
 		super.dispose();
 		this._isDisposing = false;
 		// console.log('ALIVE MODELS: ' + Object.keys(aliveModels).join('\n'));
+		console.info((<any>new Error('Model disposed with resource: ' + this._associatedResource)).stack);
 	}
 
 	public onBeforeAttached(): void {
