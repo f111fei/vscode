@@ -75,6 +75,7 @@ try {
 }
 
 export const product: IProductConfiguration = productContents;
+delete productContents.updateUrl; // no update
 product.nameShort = product.nameShort || 'Code [OSS Build]';
 product.nameLong = product.nameLong || 'Code [OSS Build]';
 product.dataFolderName = product.dataFolderName || (isBuilt ? '.code-oss-build' : '.code-oss-build-dev');
